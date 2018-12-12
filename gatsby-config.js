@@ -10,6 +10,12 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages`
       }
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/util/typography'
+      }
     }
   ]
 };
