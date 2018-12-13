@@ -3,7 +3,20 @@ module.exports = {
     title: 'John Sylvain'
   },
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '÷'
+            }
+          }
+        ]
+      }
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

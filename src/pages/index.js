@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../components/Logo';
-import { Link } from 'gatsby';
-
-const Container = styled.main`
-  max-width: 40rem;
-  margin: 3em auto;
-  padding: 0 1rem;
-  color: #555;
-`;
+import Footer from '../components/Footer';
+import Container from '../components/Container';
+import { graphql, Link } from 'gatsby';
 
 const PostPreview = styled(Link)`
   display: flex;
@@ -18,7 +13,7 @@ const PostPreview = styled(Link)`
   margin-bottom: 1em;
 
   &:hover :nth-child(2) {
-    color: royalblue;
+    color: #54a0ff;
   }
 `;
 
@@ -42,9 +37,7 @@ const Tag = styled.div`
 const Layout = ({ data }) => {
   return (
     <Container>
-      <Link to="/">
-        <Logo>JS</Logo>
-      </Link>
+      <h1>Posts</h1>
       <div>
         {data.allMarkdownRemark.edges.map(
           ({
@@ -62,6 +55,7 @@ const Layout = ({ data }) => {
           )
         )}
       </div>
+      <Footer />
     </Container>
   );
 };
