@@ -1,7 +1,7 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: '14px',
+  baseFontSize: '16px',
   baseLineHeight: 1.666,
   bodyFontFamily: [
     'Avenir Next',
@@ -13,6 +13,7 @@ const typography = new Typography({
     'sans-serif'
   ],
   headerFontFamily: [
+    'EB Garamond',
     'Avenir Next',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -32,15 +33,18 @@ const typography = new Typography({
     }
   ],
   overrideStyles: () => ({
-    h2: {
-      'text-align': 'center',
+    'h1, h2': {
+      textAlign: 'center',
       margin: '3rem 0 2rem',
-      'font-size': '1.62rem'
+      fontWeight: 400
+    },
+    h2: {
+      fontSize: '1.62rem'
     },
     'h2::before, h2::after': {
       content: '""',
       display: 'inline-block',
-      'vertical-align': 'middle',
+      verticalAlign: 'middle',
       width: '46px',
       height: '2px',
       background: '#f4f4f7',

@@ -30,7 +30,7 @@ const Checkmark = styled.div`
     left: 60px;
   }
 
-  img {
+  > img {
     display: block;
     margin: 0;
     width: 30px;

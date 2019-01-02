@@ -34,10 +34,18 @@ const Tag = styled.div`
   background-color: #f4f4f7;
 `;
 
+const LogoLink = styled(Link)`
+  :focus {
+    text-decoration: none;
+  }
+`;
+
 const Layout = ({ data }) => {
   return (
     <Container>
-      <h1>Posts</h1>
+      <LogoLink to="/">
+        <Logo>JS</Logo>
+      </LogoLink>
       <div>
         {data.allMarkdownRemark.edges.map(
           ({
@@ -45,11 +53,11 @@ const Layout = ({ data }) => {
               frontmatter: { date, title, tags, path }
             }
           }) => (
-            <PostPreview to={path}>
+            <PostPreview to={path} key={path}>
               <PostPreviewText>{date}</PostPreviewText>
               <PostPreviewText bold>{title}</PostPreviewText>
               {tags.map(tag => (
-                <Tag>{tag}</Tag>
+                <Tag key={tag}>{tag}</Tag>
               ))}
             </PostPreview>
           )

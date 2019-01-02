@@ -1,15 +1,44 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
+import Logo from '../components/Logo';
+
+const Header = styled.header`
+  h1 {
+    margin-bottom: 0;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 0.725em;
+    letter-spacing: 2px;
+    text-align: center;
+    display: block;
+    margin: 1em 0 2em;
+  }
+`;
+
+const LogoLink = styled(Link)`
+  :focus {
+    text-decoration: none;
+  }
+`;
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
+  const { title, date } = markdownRemark.frontmatter;
   const html = markdownRemark.html;
   return (
     <Container>
-      <h1>{title}</h1>
+      <LogoLink to="/">
+        <Logo>JS</Logo>
+      </LogoLink>
+      <Header>
+        <h1>{title}</h1>
+        <span>John Sylvain - {date}</span>
+      </Header>
       <div
         className="blogpost"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -28,6 +57,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
