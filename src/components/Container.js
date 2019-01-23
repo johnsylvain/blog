@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  max-width: 40rem;
+  max-width: 37rem;
   margin: 3em auto;
   padding: 0 1rem;
   color: #555;

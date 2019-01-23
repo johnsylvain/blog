@@ -1,8 +1,8 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Footer from '../components/Footer';
 import Container from '../components/Container';
+import Footer from '../components/Footer';
 import Logo from '../components/Logo';
 
 const Header = styled.header`
@@ -20,32 +20,18 @@ const Header = styled.header`
   }
 `;
 
-const LogoLink = styled(Link)`
-  :focus {
-    text-decoration: none;
-  }
-`;
-
 const Template = ({ data }) => {
   const { markdownRemark } = data;
   const { title, date } = markdownRemark.frontmatter;
   const html = markdownRemark.html;
   return (
     <Container>
-      <LogoLink to="/">
-        <Logo>JS</Logo>
-      </LogoLink>
+      <Logo />
       <Header>
         <h1>{title}</h1>
         <span>John Sylvain - {date}</span>
       </Header>
-      <div
-        className="blogpost"
-        dangerouslySetInnerHTML={{ __html: html }}
-        style={{
-          fontFamily: 'avenir'
-        }}
-      />
+      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
       <Footer />
     </Container>
   );

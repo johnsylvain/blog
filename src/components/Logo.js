@@ -1,5 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+
+const LogoLink = styled(Link)`
+  :focus {
+    text-decoration: none;
+  }
+`;
 
 const Logo = styled.div`
   background: #303952;
@@ -27,4 +34,8 @@ const Logo = styled.div`
   }
 `;
 
-export default Logo;
+export default () => (
+  <LogoLink to="/">
+    <Logo>JS</Logo>
+  </LogoLink>
+);
