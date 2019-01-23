@@ -3,6 +3,7 @@ module.exports = {
     title: 'John Sylvain'
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
