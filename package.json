@@ -6,8 +6,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.0.33",

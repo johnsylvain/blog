@@ -8,12 +8,12 @@ const PostPreview = styled(Link)`
   text-decoration: none;
   margin-bottom: 1em;
 
-  &:hover :nth-child(2) {
+  &:hover > :nth-child(2) {
     color: #54a0ff;
   }
 
   & > span:first-child {
-    min-width: 130px;
+    min-width: 100px;
   }
 `;
 

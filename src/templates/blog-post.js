@@ -1,24 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
-
-const Header = styled.header`
-  h1 {
-    margin-bottom: 0;
-  }
-
-  span {
-    text-transform: uppercase;
-    font-size: 0.725em;
-    letter-spacing: 2px;
-    text-align: center;
-    display: block;
-    margin: 1em 0 2em;
-  }
-`;
+import Header from '../components/header';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
@@ -26,8 +11,8 @@ const Template = ({ data }) => {
   const html = markdownRemark.html;
   return (
     <Container>
-      <Logo />
       <Header>
+        <Logo />
         <h1>{title}</h1>
         <span>John Sylvain - {date}</span>
       </Header>

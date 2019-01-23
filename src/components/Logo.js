@@ -3,6 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const LogoLink = styled(Link)`
+  margin: 1rem auto 3rem;
+  display: inline-block;
+
   :focus {
     text-decoration: none;
   }
@@ -17,9 +20,8 @@ const Logo = styled.div`
   justify-content: center;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  width: 60px;
-  height: 60px;
-  margin: 1rem auto 3rem;
+  width: 50px;
+  height: 50px;
   transition: 0.2s ease;
   user-select: none;
   cursor: pointer;

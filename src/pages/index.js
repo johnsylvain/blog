@@ -1,8 +1,9 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
+import Header from '../components/header';
 import Logo from '../components/Logo';
-import { graphql } from 'gatsby';
 import PostPreview from '../components/PostPreview';
 import PostPreviewText from '../components/PostPreviewText';
 import Tag from '../components/Tag';
@@ -10,7 +11,9 @@ import Tag from '../components/Tag';
 const Layout = ({ data }) => {
   return (
     <Container>
-      <Logo />
+      <Header style={{ textAlign: 'center' }}>
+        <Logo />
+      </Header>
       <div>
         {data.allMarkdownRemark.edges.map(
           ({
@@ -39,7 +42,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM YYYY")
             title
             path
             tags
