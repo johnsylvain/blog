@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
-import Header from '../components/header';
+import Header from '../components/Header';
 import Logo from '../components/Logo';
 import PostPreview from '../components/PostPreview';
 import PostPreviewText from '../components/PostPreviewText';
@@ -21,14 +21,14 @@ const Layout = ({ data }) => {
               frontmatter: { date, title, tags, path }
             }
           }) => (
-            <PostPreview to={path} key={path}>
-              <PostPreviewText>{date}</PostPreviewText>
-              <PostPreviewText bold>{title}</PostPreviewText>
-              {tags.map(tag => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </PostPreview>
-          )
+              <PostPreview to={path} key={path}>
+                <PostPreviewText>{date}</PostPreviewText>
+                <PostPreviewText bold>{title}</PostPreviewText>
+                {tags.map(tag => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </PostPreview>
+            )
         )}
       </div>
       <Footer />

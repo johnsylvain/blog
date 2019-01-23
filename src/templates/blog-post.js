@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
-import Header from '../components/header';
+import Header from '../components/Header';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
