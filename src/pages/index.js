@@ -21,14 +21,14 @@ const Layout = ({ data }) => {
               frontmatter: { date, title, tags, path }
             }
           }) => (
-              <PostPreview to={path} key={path}>
-                <PostPreviewText>{date}</PostPreviewText>
-                <PostPreviewText bold>{title}</PostPreviewText>
-                {tags.map(tag => (
-                  <Tag key={tag}>{tag}</Tag>
-                ))}
-              </PostPreview>
-            )
+            <PostPreview to={path} key={path}>
+              <PostPreviewText>{date}</PostPreviewText>
+              <PostPreviewText bold>{title}</PostPreviewText>
+              {tags.map(tag => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </PostPreview>
+          )
         )}
       </div>
       <Footer />

@@ -11,10 +11,19 @@ CSS `@supports` is pretty handy for setting up fallback for older browsers when 
 CSS.supports('position', 'sticky');
 ```
 
-We can make a small wrapper around this to ensure `CSS` and `supports` are defined.
+## An example
+
+Consider the need to apply styling via JavaScript. You might need to determine a browser specific prefix, which could look like the following:
 
 ```js
-function supports(key, value) {
-  return CSS && CSS.supports && CSS.supports(key, value);
-}
+const prefix = CSS.supports('position', 'sticky')
+    ? 'sticky'
+    : CSS.supports('position', '-webkit-sticky')
+      ? '-webkit-sticky'
+      : '';
 ```
+
+## Caveats
+
+* `CSS.supports` and `@supports` is not supported in IE.
+* I recommend against using `not` when using either `CSS.supports` or `@supports`, especially when targeting older browsers.
