@@ -2,7 +2,8 @@
 path: "/css-supports"
 title:  "CSS @supports in JavaScript"
 date:   "2019-01-22"
-tags: [ javascript, css ]
+tag: JavaScript
+spoiler: Improve browser support with CSS supports.
 ---
 
 CSS `@supports` is pretty handy for setting up fallback for older browsers when using new CSS features. But what if you need to determine browser support in your JavaScript code? Here's what that looks like:
