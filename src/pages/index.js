@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
@@ -11,6 +12,11 @@ import Tag from '../components/Tag';
 const Layout = ({ data }) => {
   return (
     <Container>
+      <Helmet>
+        <title>Blog</title>
+        <meta name="title" content="Blog" />
+        <meta name="description" content="A personal blog by John Sylvain" />
+      </Helmet>
       <Header style={{ textAlign: 'center' }}>
         <Logo />
       </Header>
@@ -18,15 +24,13 @@ const Layout = ({ data }) => {
         {data.allMarkdownRemark.edges.map(
           ({
             node: {
-              frontmatter: { date, title, tags, path }
+              frontmatter: { date, title, tag, path }
             }
           }) => (
             <PostPreview to={path} key={path}>
               <PostPreviewText>{date}</PostPreviewText>
               <PostPreviewText bold>{title}</PostPreviewText>
-              {tags.map(tag => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
+              <PostPreviewText>{tag}</PostPreviewText>
             </PostPreview>
           )
         )}
@@ -45,7 +49,7 @@ export const query = graphql`
             date(formatString: "DD MMM YYYY")
             title
             path
-            tags
+            tag
           }
         }
       }

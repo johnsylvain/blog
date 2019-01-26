@@ -1,27 +1,21 @@
 import Typography from 'typography';
 
+const fontStack = [
+  'Avenir Next',
+  'Avenir',
+  '-apple-system',
+  'BlinkMacSystemFont',
+  'Helvetica Neue',
+  'Helvetica',
+  'Arial',
+  'sans-serif'
+];
+
 const typography = new Typography({
   baseFontSize: '16px',
   baseLineHeight: 1.666,
-  bodyFontFamily: [
-    'Avenir Next',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'Helvetica Neue',
-    'Helvetica',
-    'Arial',
-    'sans-serif'
-  ],
-  headerFontFamily: [
-    'EB Garamond',
-    'Avenir Next',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'Helvetica Neue',
-    'Helvetica',
-    'Arial',
-    'sans-serif'
-  ],
+  bodyFontFamily: fontStack,
+  headerFontFamily: ['EB Garamond', ...fontStack],
   googleFonts: [
     {
       name: 'EB Garamond',
@@ -33,10 +27,17 @@ const typography = new Typography({
     }
   ],
   overrideStyles: () => ({
+    '*': {
+      textRendering: 'optimizeLegibility',
+      '-webkit-font-smoothing': 'antialiased'
+    },
     'h1, h2': {
       textAlign: 'center',
       margin: '3rem 0 2rem',
       fontWeight: 400
+    },
+    h1: {
+      fontSize: '2.3rem'
     },
     h2: {
       fontSize: '1.62rem'
@@ -47,7 +48,7 @@ const typography = new Typography({
       verticalAlign: 'middle',
       width: '46px',
       height: '2px',
-      background: '#f4f4f7',
+      background: '#f4f6f8',
       margin: '0 20px'
     }
   })

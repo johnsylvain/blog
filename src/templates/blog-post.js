@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
@@ -7,10 +8,15 @@ import Header from '../components/Header';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
-  const { title, date } = markdownRemark.frontmatter;
+  const { title, date, spoiler } = markdownRemark.frontmatter;
   const html = markdownRemark.html;
   return (
     <Container>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={spoiler} />
+      </Helmet>
       <Header>
         <Logo />
         <h1>{title}</h1>
@@ -29,6 +35,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        spoiler
       }
     }
   }

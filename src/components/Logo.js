@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const LogoLink = styled(Link)`
   margin: 1rem auto 3rem;
   display: inline-block;
+  text-decoration: none;
 
   :focus {
     text-decoration: none;
@@ -13,26 +14,20 @@ const LogoLink = styled(Link)`
 
 const Logo = styled.div`
   background: #303952;
-  border-radius: 50%;
-  padding: 1rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  width: 50px;
-  height: 50px;
-  transition: 0.2s ease;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease;
   user-select: none;
-  cursor: pointer;
-  box-shadow: 4px 2px 0px rgba(255, 0, 0, 0.5),
-    -5px -2px 0px rgba(0, 255, 0, 0.5), 2px -2px 0px rgba(0, 0, 255, 0.5);
 
   &:hover {
-    box-shadow: 0px 0px 0px rgba(255, 0, 0, 0.5),
-      0px 0px 0px rgba(0, 255, 0, 0.5), 0px 0px 0px rgba(0, 0, 255, 0.5);
-    background: lighten(#303952, 3%);
-    text-decoration: none;
+    box-shadow: 0 2px 10px #30395266;
   }
 `;
 

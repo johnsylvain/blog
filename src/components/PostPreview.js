@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const PostPreview = styled(Link)`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   color: #555;
   text-decoration: none;
   margin-bottom: 1em;
