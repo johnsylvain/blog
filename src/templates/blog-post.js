@@ -13,8 +13,8 @@ const Template = ({ data }) => {
   return (
     <Container>
       <Helmet>
-        <title>{title}</title>
-        <meta name="title" content={title} />
+        <title>{`${title} - John Sylvain`}</title>
+        <meta name="title" content={`${title} - John Sylvain`} />
         <meta name="description" content={spoiler} />
       </Helmet>
       <Header>

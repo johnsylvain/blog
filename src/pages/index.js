@@ -13,7 +13,7 @@ const Layout = ({ data }) => {
   return (
     <Container>
       <Helmet>
-        <title>Blog</title>
+        <title>Blog - John Sylvain</title>
         <meta name="title" content="Blog" />
         <meta name="description" content="A personal blog by John Sylvain" />
       </Helmet>
