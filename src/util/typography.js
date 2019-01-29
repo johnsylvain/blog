@@ -31,6 +31,18 @@ const typography = new Typography({
       textRendering: 'optimizeLegibility',
       '-webkit-font-smoothing': 'antialiased'
     },
+    '.blogpost a': {
+      background: 'linear-gradient(to bottom, #54a0ff55 0%, #54a0ff55 100%)',
+      backgroundPosition: '0 100%',
+      backgroundRepeat: 'repeat-x',
+      backgroundSize: '2px 2px',
+      textDecoration: 'none',
+      transition: 'background-size .2s',
+      color: '#555'
+    },
+    '.blogpost a:hover': {
+      backgroundSize: '2px 50px'
+    },
     'h1, h2': {
       textAlign: 'center',
       margin: '3rem 0 2rem',
