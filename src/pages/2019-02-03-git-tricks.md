@@ -1,10 +1,9 @@
 ---
 path: "/git-tricks"
-title:  "Git tricks"
-date:   "2019-03-02"
-tag: Git
-spoiler: A collection of useful git tricks
-hidden: true
+title: "Git tricks"
+date: "2019-02-03"
+tag: "Git"
+spoiler: "A collection of useful git tricks"
 ---
 
 Here's a (growing) collection of git commands/tricks that I find useful. While there are many more, these are ones that I use on a daily basis.
@@ -13,7 +12,7 @@ Here's a (growing) collection of git commands/tricks that I find useful. While t
 
 1. `git checkout -`: switch to the previous branch. Very similar to `cd -`
 
-1. `git add -p`: Interactivly stage files. Similar UI to `git rebase -i`
+1. `git add -p`: Interactivly stage files. Similar experience to `git rebase -i`
 
 1. `gitignore <language>`: This is a custom function you can add to your bashrc. Please refer to [gitignore.io](https://gitignore.io) for more usage information.
     ```bash
