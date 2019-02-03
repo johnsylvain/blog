@@ -1,7 +1,7 @@
 ---
 path: "/css-supports"
-title:  "CSS @supports in JavaScript"
-date:   "2019-01-22"
+title: "CSS @supports in JavaScript"
+date: "2019-01-22"
 tag: JavaScript
 spoiler: Improve browser support with CSS supports.
 ---

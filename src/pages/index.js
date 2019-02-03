@@ -14,7 +14,7 @@ const Layout = ({ data }) => {
     <Container>
       <Helmet>
         <title>Blog - John Sylvain</title>
-        <meta name="title" content="Blog" />
+        <meta name="title" content="Blog - John Sylvain" />
         <meta name="description" content="A personal blog by John Sylvain" />
       </Helmet>
       <Header style={{ textAlign: 'center' }}>
@@ -42,10 +42,7 @@ const Layout = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { hidden: { ne: true } } }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           frontmatter {

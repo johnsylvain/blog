@@ -10,6 +10,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank'
+            }
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               inlineCodeMarker: '÷'

@@ -1,7 +1,7 @@
 ---
 path: "/cookie-parser"
-title:  "A simple cookie parser"
-date:   "2018-06-23"
+title: "A simple cookie parser"
+date: "2018-06-23"
 tag: JavaScript
 spoiler: Parse cookie strings with ease.
 ---

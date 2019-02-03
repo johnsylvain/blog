@@ -1,7 +1,7 @@
 ---
 path: "/url-parser"
-title:  "The simplest URL parser"
-date:   "2019-01-30"
+title: "The simplest URL parser"
+date: "2019-01-27"
 tag: JavaScript
 spoiler: No need for Regex here.
 ---
