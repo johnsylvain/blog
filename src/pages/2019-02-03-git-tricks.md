@@ -12,7 +12,9 @@ Here's a (growing) collection of git commands/tricks that I find useful. While t
 
 1. `git checkout -`: switch to the previous branch. Very similar to `cd -`
 
-1. `git add -p`: Interactivly stage files. Similar experience to `git rebase -i`
+1. `git checkout .`: discard all unstaged changes. This action is irreversible.
+
+1. `git add -p`: Interactively stage files. Similar experience to `git rebase -i`
 
 1. `gitignore <language>`: This is a custom function you can add to your bashrc. Please refer to [gitignore.io](https://gitignore.io) for more usage information.
     ```bash
