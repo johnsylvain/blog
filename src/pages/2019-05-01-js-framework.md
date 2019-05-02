@@ -1,7 +1,7 @@
 ---
 path: "/js-framework"
 title: "Lessons learned: Building a JS Framework"
-date: "2019-04-29"
+date: "2019-05-01"
 tag: Dev
 spoiler: What I learned from building my own JavaScript framework.
 ---
