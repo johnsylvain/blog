@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import useDarkMode from '../hooks/useDarkMode';
 
 const LogoLink = styled(Link)`
-  margin: 1rem auto 3rem;
   display: inline-block;
   text-decoration: none;
 
@@ -13,7 +13,7 @@ const LogoLink = styled(Link)`
 `;
 
 const Logo = styled.div`
-  background: #303952;
+  background: #54a0ff;
   border-radius: 3px;
   font-size: 0.9rem;
   display: flex;
@@ -31,8 +31,12 @@ const Logo = styled.div`
   }
 `;
 
-export default () => (
-  <LogoLink to="/">
-    <Logo>JS</Logo>
-  </LogoLink>
-);
+export default () => {
+  const [darkMode] = useDarkMode();
+
+  return (
+    <LogoLink to="/">
+      <Logo darkMode={darkMode}>JS</Logo>
+    </LogoLink>
+  );
+};

@@ -19,7 +19,7 @@ const Footer = styled.footer`
     a {
       text-decoration: none;
       font-weight: 600;
-      color: #555;
+      color: inherit;
 
       &:hover {
         text-decoration: underline;

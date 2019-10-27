@@ -38,7 +38,7 @@ const typography = new Typography({
       backgroundSize: '2px 2px',
       textDecoration: 'none',
       transition: 'background-size .2s',
-      color: '#555'
+      color: 'inherit'
     },
     '.blogpost a:hover': {
       backgroundSize: '2px 50px'
@@ -53,15 +53,6 @@ const typography = new Typography({
     },
     h2: {
       fontSize: '1.62rem'
-    },
-    'h2::before, h2::after': {
-      content: '""',
-      display: 'inline-block',
-      verticalAlign: 'middle',
-      width: '46px',
-      height: '2px',
-      background: '#f4f6f8',
-      margin: '0 20px'
     }
   })
 });
