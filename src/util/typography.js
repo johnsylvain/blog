@@ -45,7 +45,7 @@ const typography = new Typography({
     },
     'h1, h2': {
       textAlign: 'center',
-      margin: '3rem 0 2rem',
+      margin: '3rem 0 1.5rem',
       fontWeight: 400
     },
     h1: {

@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 
+const isBrowser = typeof window !== 'undefined';
+
 export default function useMedia(queries, values, defaultValue) {
+  if (!isBrowser) return defaultValue;
+
   const mediaQueryLists = queries.map(q => window.matchMedia(q));
 
   const getValue = () => {

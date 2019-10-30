@@ -19,7 +19,7 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -27,7 +27,7 @@ const Logo = styled.div`
   user-select: none;
 
   &:hover {
-    box-shadow: 0 2px 10px #30395266;
+    box-shadow: 0 2px 10px #54a0ff66;
   }
 `;
 

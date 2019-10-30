@@ -2,49 +2,70 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import useDarkMode from '../hooks/useDarkMode';
 
-const Label = styled.label`
-  outline: 0;
-  display: block;
-  width: 3em;
-  height: 1.5em;
-  position: relative;
+const Toggle = styled.button`
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  outline: none;
   cursor: pointer;
-  user-select: none;
-  margin: 0;
+`;
 
-  background: #d3d3d3;
-  border-radius: 2em;
-  padding: 2px;
-  transition: all 0.4s ease;
+const InnerCircle = styled.div`
+  border-radius: 50%;
+  background: #2c2c2c;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 300ms ease-in-out;
+  transform: scale(1);
+  z-index: 1;
+  opacity: 0.4;
 
   &:after {
-    position: relative;
-    display: block;
     content: '';
-    width: 50%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: white;
-    transition: all 0.2s ease;
+    border: 2px dotted #2c2c2c;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(0.5);
+    transition: 300ms ease-in-out;
+    z-index: -100;
   }
 
-  &:after {
-    left: 0;
+  &:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    border-radius: 50%;
+    z-index: 3;
+    transition: 300ms ease-in-out;
+    transform: scale(1);
   }
 
   ${props =>
-    props.checked &&
+    props.darkMode &&
     css`
-      background: #54a0ff;
+      background: white;
+      transform: scale(0.7);
+
+      &:before {
+        background: #2c2c2c;
+        transform: scale(0);
+      }
 
       &:after {
-        left: 50%;
+        transform: scale(2);
+        border-color: white;
       }
     `}
-`;
-
-const Input = styled.input`
-  display: none;
 `;
 
 const DarkModeToggle = () => {
@@ -52,16 +73,9 @@ const DarkModeToggle = () => {
 
   return (
     <div>
-      <Input
-        id="dark-mode"
-        type="checkbox"
-        value={darkMode}
-        defaultChecked={darkMode}
-        onChange={() => {
-          setDarkMode(!darkMode);
-        }}
-      />
-      <Label htmlFor="dark-mode" checked={darkMode} />
+      <Toggle onClick={() => setDarkMode(!darkMode)}>
+        <InnerCircle darkMode={darkMode} />
+      </Toggle>
     </div>
   );
 };
