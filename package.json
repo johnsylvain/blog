@@ -2,6 +2,9 @@
   "name": "blog",
   "description": "John Sylvain Blog",
   "license": "MIT",
+  "engines": {
+    "node": ">=10.13.0"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "npm run develop",
