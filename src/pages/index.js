@@ -16,6 +16,12 @@ const Layout = ({ data }) => {
         <title>Blog - John Sylvain</title>
         <meta name="title" content="Blog - John Sylvain" />
         <meta name="description" content="A personal blog by John Sylvain" />
+        <script
+          async
+          defer
+          data-website-id="41f7749c-dda4-405a-9550-01cfb7f4ed9a"
+          src="https://umami.sylvain.win/umami.js"
+        />
       </Helmet>
       <Header style={{ textAlign: 'center' }}>
         <Logo />
