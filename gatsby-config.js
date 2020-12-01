@@ -41,10 +41,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-2WM0K1JXEH",
-        ],
-      },
+        trackingIds: ['G-2WM0K1JXEH']
+      }
     },
+    {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: '41f7749c-dda4-405a-9550-01cfb7f4ed9a',
+        srcUrl: 'https://umami.sylvain.win/umami.js',
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: false
+      }
+    }
   ]
 };
