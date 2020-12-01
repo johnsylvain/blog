@@ -7,7 +7,6 @@ import Logo from '../components/Logo';
 import Header from '../components/Header';
 
 const Template = ({ data }) => {
-  console.log(data);
   const { markdownRemark } = data;
   const { title, date, spoiler } = markdownRemark.frontmatter;
   const html = markdownRemark.html;

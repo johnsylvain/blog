@@ -27,12 +27,12 @@ const Layout = ({ data }) => {
               frontmatter: { date, title, tag, path }
             }
           }) => (
-            <PostPreview to={path} key={path}>
-              <PostPreviewText>{date}</PostPreviewText>
-              <PostPreviewText bold>{title}</PostPreviewText>
-              <PostPreviewText>{tag}</PostPreviewText>
-            </PostPreview>
-          )
+              <PostPreview to={path} key={path}>
+                <PostPreviewText>{date}</PostPreviewText>
+                <PostPreviewText bold>{title}</PostPreviewText>
+                <PostPreviewText>{tag}</PostPreviewText>
+              </PostPreview>
+            )
         )}
       </div>
       <Footer />
@@ -42,7 +42,10 @@ const Layout = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { hidden: { ne: true } } }
+    ) {
       edges {
         node {
           frontmatter {
