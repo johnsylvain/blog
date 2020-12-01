@@ -12,7 +12,7 @@ By the end, we'll end up with a Node server that streams a synchronized audio fi
 
 ## Demo
 
-This post is inspired by own internet radio station, Lounge FM. You can view the site on [lounge.cool](https://lounge.cool) and the source code [on GitHub](https://github.com/johnsylvain/loungefm). We will only be talking about the streaming engine, not the frontend UI.
+This post is inspired by my own internet radio station, Lounge FM. You can view the site on [lounge.cool](https://lounge.cool) and the source code [on GitHub](https://github.com/johnsylvain/loungefm). We will only be talking about the streaming engine, not the frontend UI.
 
 ## Preperation
 
