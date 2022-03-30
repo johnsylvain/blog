@@ -38,14 +38,14 @@ const typography = new Typography({
       backgroundSize: '2px 2px',
       textDecoration: 'none',
       transition: 'background-size .2s',
-      color: '#555'
+      color: 'inherit'
     },
     '.blogpost a:hover': {
       backgroundSize: '2px 50px'
     },
     'h1, h2': {
       textAlign: 'center',
-      margin: '3rem 0 2rem',
+      margin: '3rem 0 1.5rem',
       fontWeight: 400
     },
     h1: {

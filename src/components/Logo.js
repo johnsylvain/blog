@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import useDarkMode from '../hooks/useDarkMode';
 
 const LogoLink = styled(Link)`
-  margin: 1rem auto 3rem;
   display: inline-block;
   text-decoration: none;
 
@@ -13,13 +13,13 @@ const LogoLink = styled(Link)`
 `;
 
 const Logo = styled.div`
-  background: #303952;
+  background: #54a0ff;
   border-radius: 3px;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -27,12 +27,16 @@ const Logo = styled.div`
   user-select: none;
 
   &:hover {
-    box-shadow: 0 2px 10px #30395266;
+    box-shadow: 0 2px 10px #54a0ff66;
   }
 `;
 
-export default () => (
-  <LogoLink to="/">
-    <Logo>JS</Logo>
-  </LogoLink>
-);
+export default () => {
+  const [darkMode] = useDarkMode();
+
+  return (
+    <LogoLink to="/">
+      <Logo darkMode={darkMode}>JS</Logo>
+    </LogoLink>
+  );
+};

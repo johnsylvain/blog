@@ -17,11 +17,12 @@ Here's a (growing) collection of git commands/tricks that I find useful. While t
 1. `git add -p`: Interactively stage files. Similar experience to `git rebase -i`
 
 1. `gitignore <language>`: This is a custom function you can add to your bashrc. Please refer to [gitignore.io](https://gitignore.io) for more usage information.
-    ```bash
-    gitignore() {
-      curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore
-    }
-    ```
+
+```bash
+  gitignore() {
+    curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore
+  }
+```
 
 ## Handling mistakes
 

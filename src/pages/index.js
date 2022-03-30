@@ -7,18 +7,21 @@ import Header from '../components/Header';
 import Logo from '../components/Logo';
 import PostPreview from '../components/PostPreview';
 import PostPreviewText from '../components/PostPreviewText';
-import Tag from '../components/Tag';
+import DarkModeToggle from '../components/DarkModeToggle';
+import GlobalStyle from '../components/GlobalStyle';
 
 const Layout = ({ data }) => {
   return (
     <Container>
+      <GlobalStyle />
       <Helmet>
         <title>Blog - John Sylvain</title>
         <meta name="title" content="Blog - John Sylvain" />
         <meta name="description" content="A personal blog by John Sylvain" />
       </Helmet>
-      <Header style={{ textAlign: 'center' }}>
+      <Header>
         <Logo />
+        <DarkModeToggle />
       </Header>
       <div>
         {data.allMarkdownRemark.edges.map(
